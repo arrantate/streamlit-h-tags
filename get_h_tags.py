@@ -31,7 +31,9 @@ url = st.text_input('URL to check')
 if url:
     soup = get_soup(url)
     tags = get_tag_df(soup)
-    st.table(tags)
+    # .assign(hack='').set_index('hack') is added to remove the df index from the table display on the streamlit page
+    st.table(tags.assign(hack='').set_index('hack'))
     
+st.header("TEST")
 
 
