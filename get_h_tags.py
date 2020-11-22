@@ -33,6 +33,7 @@ def download_csv(df, text):
 
 
 # STREAMLIT MAIN PAGE
+st.set_page_config(page_title='Get <h> Tags')
 st.title("Get <h> Tags")
 st.subheader("Enter a URL to get started.")
 url = st.text_input('URL to check')
